@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int t, sum, a, b, i, loops;
+ scanf("%d", &t);
+ for(i=1;i<=t;i++){
+    //printf("t=%d\n",i);
+  scanf("%d%d", &a, &b);
+  printf("Case %d: OddSum[%d..%d]", i, a, b);
+  a|=1;
+  for(sum=loops=0;a<=b;a+=2,loops++){
+      //printf("[loops %d:]",loops);
+   if(loops==0)printf("=");
+   else printf("+");
+   printf("%d", a);
+   sum+=a;
+  }
+  if(loops==1) printf("\n");
+  else printf("=%d\n", sum);
+ }
+}
